@@ -1,0 +1,7 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h2>{{ image['image_name'] }}</h2>
+<img src="{{ url_for('get_image', image_id=image['id']) }}" alt="{{ image['image_name'] }}" style="max-width: 100%; height: auto;">
+<a href="{{ url_for('view_images') }}">Back to Images</a>
+{% endblock %}
